@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    min-height: 10px;
+}
+
+.bottom {
+    background-color: black;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: black;
+    z-index: 100;
+    /* padding: 12px 20px; */
+}
+
+.container {
+    margin-top: 80px;
+    /* enough space for fixed nav */
+}
+
+span.container.flex {
+    background-color: black;
+    color: white;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.left {
+    width: 22vw;
+    background-color: #1a1919;
+    padding: 9px;
+
+}
+
+.right {
+    width: 75vw;
+    background-color: #252424;
+    padding: 9px;
+     overflow-y: scroll;
+     overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home {
+    width: 29vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.s {
+    background-color: #272424;
+    padding: 6px;
+    border-radius: 36px;
+    height: 25px;
+    width: 337px;
+}
+
+.input {
+    background-color: #272424;
+    border: none;
+    font-size: 14px;
+    line-height: 29px;
+    width: 280px;
+    caret-color: white;
+    color: white;
+    font-weight: 500;
+}
+
+.no-outline:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.button {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    border: 0px;
+    border-radius: var(--encore-button-corner-radius, 9999px);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition-duration: var(--shortest-3);
+    transition-timing-function: var(--productive);
+    user-select: none;
+    vertical-align: middle;
+    will-change: transform;
+    color: var(--text-subdued, #656565);
+    min-inline-size: 0px;
+    min-block-size: var(--encore-control-size-base, 48px);
+    padding-block: var(--encore-spacing-tighter-2, 8px);
+    padding-inline: 0px;
+    display: inline-flex;
+    gap: var(--encore-spacing-tighter-2);
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition-property: color, transform;
+    font-weight: 700;
+}
+
+.button:hover {
+    color: rgb(236, 234, 234);
+    transform: scale(1.1);
+    /* Grows smoothly without pushing layout */
+}
+
+.button:hover .icon {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+    transition: 0.0s ease;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 12px;
+    width: 102px;
+    border-radius: 49px;
+    border: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.button1:hover {
+    background-color: #f0f0f0;
+    ;
+    transform: scale(1.03);
+}
+
+/* Search box styling */
+.search {
+    border: 1px solid transparent;
+    border-radius: 38px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    transition: border 0.2s ease;
+    width: 392px;
+}
+
+
+
+/* Inner hover area */
+.hover {
+    display: flex;
+    align-items: center;
+}
+
+/* Search icon spacing */
+.hover img {
+    margin-right: 6px;
+}
+
+/* SVG color change on search hover */
+.search:hover .img {
+    filter: brightness(7) saturate(100%) sepia(100%) hue-rotate(200deg);
+}
+
+.search:hover {
+    /* border: 1px solid grey; */
+    background-color: #333;
+    /* lighter than #272424 */
+}
+
+.search:hover .input {
+    background-color: #333;
+    /* match parent background on hover */
+}
+
+.search.active {
+    border: 1px solid white;
+}
+
+.search.active .img {
+    filter: brightness(0) invert(1);
+    /* keep white icon when clicked */
+}
+
+
+
+.last {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, #af2896, #509bf5);
+    width: 99vw;
+    min-height: 65px;
+    margin-top: 10px;
+    margin: 4px 9px;
+    bottom: 0px;
+    background-color: #1a1919;
+}
+
+.h6 {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 0 0 10px;
+    color: white;
+}
+
+.lastp {
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    padding: 5px 2px 0 0px;
+}
+
+.lastbtn {
+    position: relative;
+    top: 8px;
+    right: 25px;
+    background: white;
+    border: none;
+    padding: 15px;
+    color: black;
+    font-family: system-ui;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 49px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 12px;
+
+    border-radius: 49px;
+    border: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+}
+
+.lastbtn:hover {
+    background-color: #f0f0f0;
+    ;
+    transform: scale(1.03);
+}
+
+button {
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+
+    font-style: normal;
+}
+
+/* .heading {
+  width: 100%;                  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  font-weight: 200;
+    transition: box-shadow 0.3s ease;
+} */
+/* Sticky heading that stays at the top */
+.heading {
+    position: sticky;
+    top: 0;
+    background-color: #181818;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Shadow appears only on scroll */
+.heading.shadow {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Scrollbar styling */
+div#boxes {
+    overflow-y: auto;
+    height: 440px;
+    scrollbar-width: thin;
+    scrollbar-color: grey transparent;
+}
+
+.boxes {
+    overflow-y: auto;
+    height: 490px;
+}
+
+/* Target the correct ID — not both ID and class */
+#boxes {
+    overflow-y: auto;
+    height: 490px;
+
+    /* Firefox: hidden by default */
+    scrollbar-width: none;
+    scrollbar-color: grey transparent;
+}
+
+/* Show scrollbar on hover (Firefox) */
+#boxes:hover {
+    scrollbar-width: thin;
+    scrollbar-color: grey transparent;
+}
+
+/* Webkit browsers - hidden by default */
+#boxes::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Webkit browsers - show on hover */
+#boxes:hover::-webkit-scrollbar {
+    width: 6px;
+}
+
+#boxes:hover::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#boxes:hover::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+}
+
+#boxes:hover::-webkit-scrollbar-thumb:hover {
+    background-color: darkgrey;
+}
+
+.left {
+    width: 22vw;
+    background-color: #1a1919;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    /* ensures vertical stacking */
+
+}
+
+div .box1 {
+    background-color: #292727;
+    margin-top: 30px;
+    margin-bottom: 3px;
+
+    padding: 10px;
+}
+
+div .box2 {
+    background-color: #222020;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    padding: 10px;
+}
+
+div .box {
+    border-radius: 15px;
+}
+
+h2 {
+    font-size: 13px;
+    margin: 5px;
+}
+
+p {
+    font-size: 11px;
+    font-weight: 300;
+    margin: 5px;
+}
+
+.card {
+    padding: 9px;
+    font-size: 11px;
+    font-weight: 700;
+    border: none;
+    border-radius: 17px;
+    margin: 5px;
+    width: 150px;
+}
+
+.ai {
+    font-size: 10px;
+    color: white;
+    font-weight: 500;
+    margin: 2px;
+}
+
+.ai a span {
+    font-size: 10px;
+    color: grey;
+    padding: 0 5px 5px 5px;
+    text-decoration: none;
+}
+
+.ai a {
+    font-size: 10px;
+    color: grey;
+    padding: 0 5px 5px 5px;
+    text-decoration: none;
+}
+
+.hover:hover {
+    text-decoration: underline;
+}
+
+.padding {
+    margin: 1px;
+    display: inline-block;
+}
+
+.buttonn button {
+    background-color: #222020;
+    border: 1px solid grey;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 27px;
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 36px;
+}
+
+.buttonn button:hover {
+    border: 2px solid grey;
+    transform: scale(1.03);
+}
+.spotifyPlaylists{
+    padding: 5px;
+        width: 98%;
+    display: flex;
+    flex-direction: column;
+    /* z-index: 17; */
+    /* position: absolute; */
+}
+.span a{
+    color: grey;
+    text-decoration: none;
+}
+.cardContainer{
+display: flex;
+
+}
+.card:hover{
+    background-color: #3b3b3b;
+}
+.card a :hover{
+    color: rgb(58, 58, 58);
+}
+.card .img{
+   box-shadow: 6px 13px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+#boxes:hover::-webkit-scrollbar-thumb {
+  background-color: #555; /* match card hover */
+}
+
+#boxes, .boxes {
+  overflow-y: auto;
+  height: 490px;
+  scrollbar-width: thin;
+  scrollbar-color: grey transparent;
+}
+
+h3:hover{
+    text-decoration: underline;
+    text-decoration-color:white;
+}
+.get{
+    padding: 0 8px 0 8px;
+}
+
+.left{
+    position: relative;
+}
+
+h3{
+    position: relative;
+}
+.cardContainer{
+    position: absolute;
+    top:20px;
+}

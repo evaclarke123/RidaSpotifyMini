@@ -1,0 +1,678 @@
+.cardContainer {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  text-overflow: hidden;
+  white-space: nowrap;
+  min-height: 240px;
+}
+.card {
+  width: 150px;
+  flex-shrink: 0;
+  width: 100px;
+  text-overflow: ellipsis;
+}
+
+
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.cardContainer {
+  display: grid;
+
+  gap: 20px;
+  padding: 10px 0;
+
+}
+
+.cardContainer::-webkit-scrollbar {
+  display: none;
+}
+ .onit {
+    background-color: #0000004f;
+    border: none;
+    border-radius: 34px;
+  }
+
+  .done:hover {
+    background-color: #000000ce;
+  }
+
+  .slider .onit {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .slider:hover .onit {
+    opacity: 1;
+    pointer-events: auto;
+  }
+ .right {
+  overflow-y: auto;
+  scrollbar-width: thin;               /* For Firefox */
+  scrollbar-color: #2e2e2e #2b2a2a;       /* For Firefox */
+}
+
+/* For Chrome, Edge, Safari */
+.right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right::-webkit-scrollbar-track {
+  background: #242424b4;
+}
+
+.right::-webkit-scrollbar-thumb {
+  background-color: #646464;
+  border-radius: 4px;
+}
+
+.right::-webkit-scrollbar-thumb:hover {
+  background-color: #2b2a2a;
+}
+.right {
+  overflow-y: auto;
+  height: 79vh; /* or whatever fits your layout */
+}
+
+.artist{
+      width: 156px;
+    border-radius: 100px;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
+.bolder{
+      font-weight: 600;
+}
+.smaller{
+  color: grey;
+}
+.c{
+  padding-left: 7px;
+
+}
+.AN img {
+  display: block;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.AN p {
+  text-align: center;
+  margin: 5px 0;
+}
+
+
+.AN {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  min-height: 200px; /* fixes height collapse */
+  scrollbar-width: none;
+}
+
+.AN::-webkit-scrollbar {
+  display: none;
+}
+
+.AN > div {
+  flex-shrink: 0;
+  width: 159px;
+  /* background-color: #111; for testing */
+}
+.bolder:hover{
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.did:hover{
+  background-color: #424141;
+  border-radius: 15px;
+  
+}
+.did{
+  padding: 5px;
+  /* min-height: 200px; */
+}
+
+ .did {
+        position: relative;
+        width: 159px;
+    }
+    .artist {
+        width: 100%;
+    }
+    .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px; /* Adjust the size of the play icon */
+        height: 40px; /* Set height equal to width for a perfect circle */
+        background-color: green; /* Green background */
+        border-radius: 50%; /* Makes it circular */
+        padding: 10px; /* Adds space around the icon */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1; /* Ensure it appears over the image */
+        opacity: 0;
+    }
+
+    .did:hover .play-icon{
+       opacity: 1;
+  transition: all 0.2s ease-out;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+  transform: translateX(-3px);
+    transition: all 0.4s ease-out;
+    }
+    .play-icon img {
+        width: 20px; /* Adjust the size of the play icon image */
+        height: 20px; /* Adjust the size of the play icon image */
+    }
+
+    .card{
+      border-radius: 10px;
+    position: relative;
+    }
+
+    .play{
+    position: absolute;
+    background-color: #1ed760;
+    padding: 10px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 52px;
+    left: 116px;
+    opacity: 0;
+    }
+    .card:hover .play {
+  opacity: 1;
+  transition: all 0.2s ease-out;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: all 0.2s ease-out;
+}
+
+.card:hover .play:hover{
+background-color: #56d683;
+transform: scale(1.1);
+}
+.did:hover .play-icon:hover{
+background-color: #67d68e;
+transform: scale(1.01);
+}
+.spotifyplaylist{
+  position: relative;
+}
+.playbutton {
+  background-color: #ffffff;
+  padding: 16px 12px 26px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  filter: invert();
+  border-radius: 30px;
+  position: relative;
+}
+
+.seekbar {
+    height: 2px;
+    width: 95%;
+    background-color: red;
+    position: absolute;
+    bottom: 14px;
+    /* left: 122px; */
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer;
+    padding: 0.4px;
+}
+
+.circle {
+     width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(0 0 0);
+    position: absolute;
+    bottom: -4.5px;
+    left: 0;
+    transition: left 0.5s ease-out;
+}
+
+.songbtn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.songbtn .songinfo {
+flex: 1;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    overflow: hidden;
+    height: 33px;
+    position: relative;
+    top: -13px;
+}
+
+.songbtn .controls {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.songbtn .controls img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.songbtn .songtime {
+  flex: 1;
+  text-align: right;
+  font-size: 12px;
+  color: black;
+  font-weight: 500;
+}
+.songlist ul li{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid grey;
+padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.songlist ul img{
+  position: relative;
+  top: 4px;
+  right:5px;
+  cursor: pointer;
+  filter: invert();
+}
+.claud{
+  background-image: linear-gradient(90deg, #af2896, #509bf5);
+    width: 100vw;
+    min-height: 3.4vw;
+    margin: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-around; 
+    gap: 600px;
+}
+  span.search {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+img#volumeimg {
+  position: relative;
+  bottom: 5px;
+}
+.volume{
+     position: relative;
+    display: contents;
+    
+}
+#volumeit{
+  display: none;
+}
+.pointerr{
+  cursor: pointer;
+}
+.play{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1088px){
+  .button{
+    display:none;
+  }
+  .linein{
+    display: none;
+  }
+  .disappear{
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 924px){
+ .left{
+         position: absolute;
+        left: -259px;
+        transition: all .3s;
+        z-index: 1;
+ }
+ .right{
+  width: 100%;
+ }
+.claud{
+  background-image: linear-gradient(90deg, #af2896, #509bf5);
+    width: 100%;
+    min-height: 3.4vw;
+    margin: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+gap: 0;
+ }
+
+}
+
+@media screen and (max-width: 608px){
+.ri{
+  display: none;
+}
+.claud{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn2{
+  display: none;
+}
+.home{
+  width: 100px;
+}
+}
+@media screen and (max-width: 464px) {
+
+
+ span .home {
+   width: 30px;
+  }
+
+
+  .s {
+    display: flex;
+    
+    gap: 6px;
+  }
+
+ span .search .actice{
+    display: flex;
+   justify-content: space-between;
+    gap: 4px;
+  }
+ span .search{
+    display: flex;
+   justify-content: space-between;
+    gap: 4px;
+  }
+
+ 
+
+  .search img,
+  .s img {
+    width: 14px;
+    display: inline-block;
+  }
+
+}
+@media screen and (max-width: 388px) {
+  .left {
+    height: auto; /* Avoid forcing 100vh if not needed */
+  }
+
+
+
+  .slider {
+    display: none;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 12px;
+         max-height: 44vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+    margin: 10px 0;
+    text-align: center;
+    flex-shrink: 0; /* Prevent squishing if too many */
+  }
+  .card .img{
+    box-shadow: 6px 13px 8px rgba(0, 0, 0, 0.5);
+    width: 260px;
+
+  }
+  .card h4{
+    font-size: 20px;
+   
+  }
+  .AN {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 16px;
+  max-height: 50vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.did {
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.did img.artist {
+  width: 100%;
+  border-radius: 100px;
+  box-shadow: 6px 13px 8px rgba(0, 0, 0, 0.5);
+}
+
+.did .play-icon {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background-color: #1ed760;
+  height: 24px;
+  width: 25px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.nav{
+      display: flex;
+    gap: 5px;
+    padding: 5px;
+    position: fixed;
+}
+.play{
+  width: 20px;
+  height: 20px;
+}
+.s{
+  width: 211px;
+}
+  .doo {
+    display: block !important;  /* show logo.svg */
+    filter: invert();           /* optional effect */
+    width: 30px;
+  }
+  .playbutton{
+ position: absolute;
+    bottom: 0;
+    width: 98vw;
+    height: 72px;
+    width: 93%;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    margin: 4px;
+}
+}
+@media screen and (max-width: 924px) {
+ .doo {
+    display: block !important;  /* show logo.svg */
+    filter: invert();           /* optional effect */
+    width: 30px;
+  }
+.pointer{
+  display: none;
+}
+
+  .do,
+  .rido {
+    display: none !important;  /* keep hamburger & home icon hidden */
+  }
+
+  .input {
+    max-width: 120px;           /* make input responsive (optional) */
+  }
+  .playbutton{
+       position: absolute;
+    bottom: 0;
+    width: 98vw;
+    height: 40px;
+    width: 98%;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    margin: 4px;
+}
+}
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.playbutton{
+       position: absolute;
+    bottom: 0;
+    width: 98vw;
+    height: 28px;
+    width: 98%;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.cardContainer{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+top: 50px;
+}
+.card
+h3{
+  position: static;
+}
+.right{
+  height: 76vh;
+}
+.left{
+  height: 76vh;
+}
+@media  screen and (max-width:410px) {
+  
+    .playbutton{      
+      position: absolute;
+    bottom: 0;
+    width: 98vw;
+    height: 83px;
+    width: 94%;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .right{
+    min-height: 360px;
+  }
+}
+@media  screen and (max-width:389px) {
+  .cardContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    flex-wrap: nowrap;
+    height: 100%;
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        gap: 12px;
+         min-height: 80vh; 
+         overflow-y: none; 
+        scroll-behavior: smooth;
+}
+.card img {
+  width: 200px;        /* Your fixed width */
+  height: 200px;       /* Your fixed height */
+  object-fit: cover;   /* Crop to fit without stretching */
+  object-position: top center; /* Position visible area */
+}
+.play{
+          width: 20px;
+        height: 20px;
+        
+}
+img.playitin{
+  width: 20px;
+  height: 20px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.playbutton{
+      position: absolute;
+    bottom: 0;
+    width: 98vw;
+    height: px;
+    width: 94%;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+   
+}
+}
+.infoinit {
+  display: flex;
+  flex-wrap: wrap;   /* Allow wrapping */
+  max-width: 100%;   /* Keep inside card */
+  overflow-wrap: break-word; /* Break long words if needed */
+  word-break: break-word;    /* For older browsers */
+  white-space: normal;    
+  font-size: 10px;
+  color: grey;   /* Allow line breaks */
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="scroll.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap"
+        rel="stylesheet">
+       
+</head>
+
+<body>
+    <header>
+        <span class="top"><span class="nav flex">
+                <span class="navv flex disappear">
+                    <span class="home"><img  src="img/hamburger.svg" alt="" class="doo"><img class="pointer" src="img/logo.svg" alt="" width="30px"class="do"><img class="pointer" src="img/home.svg" alt="" width="25px"
+                            style="background-color: rgba(128, 128, 128, 0.322);padding: 8px;border-radius: 49px;" class="rido"></span>
+                    <span class="s flex">
+                        <span class="search" onclick="">
+                            <span class="hover"> <img class="pointerr" src="img/search.svg" alt="" width="23px" class="img"
+                                    style="    position: relative;left: 0px;">
+                                <input type="text" placeholder="What do you want to play?"
+                                    class="input no-outline"></span>
+                            <img class="pointerr" src="img/save.svg" alt="" width="20px"
+                                style="    border-left: 1px solid grey;padding: 3px;margin: 0px;">
+                        </span>
+                    </span> </span>
+                <button class="button get">premium</button>
+                <button class="button get">support</button>
+                <button class="button get">download</button>
+                <span style="height: 30px; background-color: white; width: 1px;" class="linein"></span>
+                <button class="button get">
+                    <img class="icon" class="pointerr" src="img/D.svg" alt="" width="13px" style="position: relative; top: 0px;margin: 3px;">
+                    InstallApp
+                </button>
+                <button class="button get">Sign up</button>
+                <button class="button1 btn2">Log in</button>
+            </span>
+        </span>
+    </header>
+    <main>
+        <span class="bottom">
+            <span class="container flex">
+                <div class="left border">
+                    <div class="heading" id="heading">
+                        <h2>Your Library</h2>
+                        <img class="pointerr" src="img/plus.svg" alt="Add" width="20px" style="height: 14px;">
+                    </div>
+                    <div class="boxes" id="boxes">
+                        <div class="songlist">
+                      <ul>
+                      <li>
+                    <div class="info">
+                        <div><img class="pointerr" src="img/music.svg" alt="">song name</div><div>song artist</div>
+                    </div>
+                    <img class="pointerr" src="img/playit.svg" alt=""class="invert">
+                    </li>
+                      </ul>
+                        </div>
+                    </div>
+
+                    <div class="ai" style="margin-top: 2px;">
+                        <a href="https://www.spotify.com/pk-en/legal/">
+                            <span class="padding">Legal</span>
+                        </a>
+
+
+                        <a href="https://www.spotify.com/pk-en/safetyandprivacy/">
+                            <span class="padding">Safety &amp; Privacy Center</span>
+                        </a>
+
+
+                        <a href="https://www.spotify.com/pk-en/legal/privacy-policy/">
+                            <span class="padding">Privacy Policy</span>
+                        </a>
+
+
+
+
+                        <a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3">
+                            <span class="padding">About Ads</span>
+                        </a>
+
+                        <a href="https://www.spotify.com/pk-en/accessibility/">
+                            <span class="padding">Accessibility</span>
+                        </a>
+                    </div>
+                    <a class="alone" style="text-decoration: none;"
+                        href="https://www.spotify.com/pk-en/legal/cookies-policy/">
+                        <span class="hover"
+                            style="margin-left:15px; color: white;  font-size: 10px;font-weight: 400;">Cookies</span>
+                    </a>
+                    <div class="buttonn"><button><img class="pointerr" src="img/world.svg" alt="" width="12px"
+                                style="padding: 3px; position: relative;top :5px;">English</button></div>
+                </div>
+
+                <span class="right border">
+                    <h3>Trending songs</h3>
+                    <div class="scrollRight" id="scrollRight">
+                        <div class="spotifyPlaylists">
+                        
+                       <div class="slider"><span><button id="scrollTop"class="onit"><img class="pointerr" src="img/left.svg" alt=""></button></span><span><button id="scrollNext"class="onit"><img class="pointerr" src="img/right.svg" alt=""></button></span></div> 
+                        <div id="cardContainer" class="cardContainer">
+                  
+                            
+                        </div>
+                   
+                        
+                    </div>
+                    </div>
+                    
+                </span>
+            </span>
+        </span>
+    </main>
+    <footer>
+         <div class="playbutton">
+  <div class="seekbar">
+    <div class="circle"></div>
+  </div>
+
+  <div class="songbtn">
+      <div class="songinfo">Song Name</div>
+
+    <div class="controls">
+      <img id="previous" class="pointerr" src="img/previousarrow.svg" alt="">
+      <img id="play" class="pointerr" src="img/btn.svg" alt="">
+      <img id="next" class="pointerr" src="img/nextarrow.svg" alt="">
+    
+
+    <div class="songtime">00:00 / 00:00</div><div class="volume" id="volume"><img class="pointerr" src="img/volume.svg" alt="" id="volumeimg"><input type="range"name="volume" id="volumeit"></div></div>
+  </div>
+</div>
+    </footer>
+    <script class="pointerr" src="css.js"></script>
+    <script class="pointerr" src="script.js"></script>
+</body>
+
+</html>
